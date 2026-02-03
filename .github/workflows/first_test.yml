@@ -1,0 +1,17 @@
+name: unit test on the first branch
+
+on:
+ branches:
+  'feature/*'
+
+jobs:
+  run-unit-test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+         uses: actions/checkout@v6.0.2
+
+     - name: run unit test
+       run: mvn test
+      
